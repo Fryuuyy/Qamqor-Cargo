@@ -591,6 +591,66 @@ button { cursor: pointer; }
   #view-transportations .transport-empty p { font-size: 11px; }
   #view-transportations .transport-empty .btn { grid-column: 2; justify-self: start; max-width: 100%; white-space: normal; }
 }
+/* Rates and settings pages: strengthen hierarchy and make the saved controls more legible. */
+#view-rates .screen-heading { margin-bottom: 23px; }
+#view-rates .screen-heading h1 { font-size: clamp(28px, 2.7vw, 34px); }
+#view-rates .screen-heading p { max-width: 680px; font-size: 13px; line-height: 1.55; }
+#view-rates .rates-banner { display: grid; grid-template-columns: 58px minmax(0,1fr) auto; align-items: center; gap: 19px; padding: 26px 29px; border-color: #f0e5dc; background: linear-gradient(105deg,#fff 0%,#fdf8f4 100%); }
+#view-rates .rates-banner-icon { width: 58px; height: 58px; border-radius: 17px; font-size: 25px; }
+#view-rates .rates-banner .eyebrow { font-size: 9px; }
+#view-rates .rates-banner h2 { margin: 6px 0 7px; font-size: 22px; letter-spacing: -.5px; }
+#view-rates .rates-banner p { max-width: 680px; font-size: 13px; line-height: 1.65; }
+#view-rates .rates-banner .btn { min-height: 47px; padding: 12px 16px; border-radius: 10px; font-size: 12px; white-space: nowrap; }
+#view-rates .rates-grid { gap: 16px; margin-top: 17px; }
+#view-rates .rate-card { display: flex; flex-direction: column; min-height: 225px; padding: 22px; border-radius: 15px; }
+#view-rates .rate-card-top { display: flex; align-items: center; justify-content: space-between; }
+#view-rates .rate-number { font-size: 11px; }
+#view-rates .rate-card-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; color: #bd673a; background: var(--orange-soft); font: 700 19px "Manrope",sans-serif; }
+#view-rates .rate-card h2 { margin: 18px 0 8px; font-size: 18px; letter-spacing: -.25px; }
+#view-rates .rate-card p { min-height: 0; margin: 0; color: #6d7982; font-size: 13px; line-height: 1.65; }
+#view-rates .rate-detail { margin-top: auto; padding-top: 14px; font-size: 11px; line-height: 1.5; }
+#view-rates .rates-disclaimer { display: flex; align-items: flex-start; gap: 11px; margin-top: 14px; padding: 13px 15px; border: 1px solid #edf0f1; border-radius: 11px; color: #687680; background: #f9fafb; }
+#view-rates .rates-disclaimer > span { width: 20px; height: 20px; display: grid; place-items: center; border-radius: 50%; color: #687680; background: #e9eef0; font: 800 11px "Manrope",sans-serif; flex: 0 0 auto; }
+#view-rates .rates-disclaimer p { margin: 1px 0 0; font-size: 11px; line-height: 1.6; }
+#view-settings .settings-grid { gap: 17px; }
+#view-settings .settings-panel { min-height: 0; padding: 26px; border-radius: 15px; }
+#view-settings .settings-panel .panel-heading h2 { margin-top: 6px; font-size: 20px; letter-spacing: -.35px; }
+#view-settings .settings-panel .panel-heading .eyebrow { font-size: 9px; }
+#view-settings .settings-icon { width: 42px; height: 42px; border-radius: 13px; font-size: 17px; }
+#view-settings .settings-panel > p { max-width: 500px; margin: 16px 0 20px; font-size: 13px; line-height: 1.65; }
+#view-settings .settings-language { align-items: center; gap: 13px; font-size: 12px; }
+#view-settings .settings-language select { min-width: 190px; min-height: 44px; padding: 10px 13px; border-radius: 9px; font-size: 13px; }
+#view-settings .save-note { display: inline-flex; width: fit-content; margin-top: 19px; padding: 8px 10px; border: 1px solid #e6f1e9; border-radius: 20px; color: #5f7868; background: #f5faf6; font-size: 11px; }
+#view-settings .account-summary { gap: 13px; margin: 18px 0 15px; }
+#view-settings .profile-avatar.large { width: 48px; height: 48px; font-size: 16px; }
+#view-settings .account-summary strong { font-size: 14px; }
+#view-settings .account-summary small { margin-top: 4px; font-size: 11px; }
+#view-settings .settings-panel > .btn { min-height: 43px; padding: 11px 15px; font-size: 12px; }
+@media (max-width: 850px) {
+  #view-rates .rates-banner { grid-template-columns: 48px minmax(0,1fr); gap: 14px; padding: 20px; }
+  #view-rates .rates-banner-icon { width: 48px; height: 48px; border-radius: 14px; font-size: 21px; }
+  #view-rates .rates-banner .btn { grid-column: 2; justify-self: start; }
+}
+@media (max-width: 620px) {
+  #view-rates .screen-heading h1 { font-size: 25px; }
+  #view-rates .screen-heading p { font-size: 11px; }
+  #view-rates .rates-banner { grid-template-columns: 38px minmax(0,1fr); gap: 11px; padding: 16px; }
+  #view-rates .rates-banner-icon { width: 38px; height: 38px; border-radius: 12px; font-size: 18px; }
+  #view-rates .rates-banner h2 { font-size: 17px; line-height: 1.35; }
+  #view-rates .rates-banner p { font-size: 11px; }
+  #view-rates .rates-banner .btn { grid-column: 1/-1; justify-self: stretch; width: 100%; }
+  #view-rates .rate-card { min-height: 0; padding: 18px; }
+  #view-rates .rate-card h2 { margin-top: 14px; font-size: 17px; }
+  #view-rates .rate-card p { font-size: 12px; }
+  #view-rates .rate-detail { margin-top: 13px; }
+  #view-rates .rates-disclaimer { padding: 12px; }
+  #view-rates .rates-disclaimer p { font-size: 10px; }
+  #view-settings .settings-panel { padding: 19px; }
+  #view-settings .settings-panel .panel-heading h2 { font-size: 18px; }
+  #view-settings .settings-panel > p { font-size: 12px; }
+  #view-settings .settings-language { align-items: stretch; flex-direction: column; gap: 7px; }
+  #view-settings .settings-language select { width: 100%; min-width: 0; min-height: 46px; font-size: 14px; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
