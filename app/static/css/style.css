@@ -549,6 +549,48 @@ button { cursor: pointer; }
   #view-planning .planning-requests { padding: 17px; border-radius: 13px; }
   #view-planning .planning-requests .panel-heading h2 { font-size: 16px; }
 }
+/* Transportation list: make filtering, shipment details, and empty states easy to scan. */
+#view-transportations .screen-heading { margin-bottom: 22px; }
+#view-transportations .screen-heading h1 { font-size: clamp(28px, 2.7vw, 34px); }
+#view-transportations .screen-heading p { max-width: 610px; font-size: 13px; line-height: 1.55; }
+#view-transportations .filters-panel { min-height: 70px; gap: 16px; margin-bottom: 15px; padding: 13px 18px; border-radius: 13px; }
+#view-transportations .filter-label { gap: 14px; color: #4f5e68; font-size: 12px; }
+#view-transportations .filter-label select { min-width: 190px; min-height: 42px; padding: 9px 12px; border-radius: 9px; font-size: 12px; }
+#view-transportations .results-count { padding: 7px 11px; border: 1px solid #e9eef0; border-radius: 20px; color: #64727c; background: #f8fafb; font-size: 11px; font-weight: 700; }
+#view-transportations .request-list { gap: 12px; }
+#view-transportations .request-card { gap: 22px; padding: 19px 21px; border-radius: 13px; box-shadow: 0 4px 14px rgba(35,52,62,.025); }
+#view-transportations .request-card h3 { font-size: 15px; line-height: 1.5; }
+#view-transportations .request-card p { margin-top: 7px; font-size: 12px; line-height: 1.55; }
+#view-transportations .request-controls { gap: 9px; }
+#view-transportations .request-controls .status { padding: 7px 11px; font-size: 10px; }
+#view-transportations .request-controls .btn { min-height: 39px; padding: 9px 13px; font-size: 11px; }
+#view-transportations .transport-empty { display: grid; grid-template-columns: 48px minmax(0,1fr) auto; align-items: center; gap: 16px; min-height: 145px; padding: 27px 29px; border-color: #edf0f1; border-radius: 15px; background: linear-gradient(110deg,#fff 0%,#fbfcfc 100%); }
+#view-transportations .transport-empty-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 15px; color: #bd673a; background: var(--orange-soft); font: 700 22px "Manrope",sans-serif; }
+#view-transportations .transport-empty strong { display: block; color: var(--ink); font: 800 16px/1.4 "Manrope",sans-serif; }
+#view-transportations .transport-empty p { margin: 5px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+#view-transportations .transport-empty .btn { min-height: 42px; padding: 10px 14px; font-size: 11px; white-space: nowrap; }
+@media (max-width: 850px) {
+  #view-transportations .request-card { grid-template-columns: 1fr; gap: 13px; }
+  #view-transportations .request-controls { justify-content: flex-start; }
+}
+@media (max-width: 620px) {
+  #view-transportations .screen-heading { align-items: center; gap: 12px; }
+  #view-transportations .screen-heading h1 { font-size: 25px; }
+  #view-transportations .screen-heading p { font-size: 11px; }
+  #view-transportations #refreshTransportations { flex: 0 0 auto; min-height: 38px; padding: 8px 10px; font-size: 10px; }
+  #view-transportations .filters-panel { align-items: stretch; flex-direction: column; gap: 10px; padding: 14px; }
+  #view-transportations .filter-label { align-items: stretch; flex-direction: column; gap: 6px; font-size: 11px; }
+  #view-transportations .filter-label select { width: 100%; min-height: 44px; font-size: 14px; }
+  #view-transportations .results-count { align-self: flex-start; font-size: 10px; }
+  #view-transportations .request-card { gap: 12px; padding: 15px; }
+  #view-transportations .request-card h3 { font-size: 13px; }
+  #view-transportations .request-card p { font-size: 11px; }
+  #view-transportations .transport-empty { grid-template-columns: 38px minmax(0,1fr); gap: 10px; min-height: 0; padding: 16px; }
+  #view-transportations .transport-empty-icon { width: 38px; height: 38px; border-radius: 12px; font-size: 18px; }
+  #view-transportations .transport-empty strong { font-size: 14px; }
+  #view-transportations .transport-empty p { font-size: 11px; }
+  #view-transportations .transport-empty .btn { grid-column: 2; justify-self: start; max-width: 100%; white-space: normal; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }

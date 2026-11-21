@@ -12,7 +12,7 @@ const translations = {
     'tracking.empty':'Жаңа өтінім жасалған соң, оның мәртебесі мен бағыты осында көрінеді.','tracking.latest':'Соңғы өтінім','tracking.from':'Бастапқы қала','tracking.to':'Жеткізу қаласы',
     'route.originPlaceholder':'Жөнелту қаласы','route.destinationPlaceholder':'Жеткізу қаласы','route.from':'Қайдан','route.to':'Қайда',
     'vehicle.workflowTitle':'Бақылау өтінім мәртебесімен жүргізіледі','vehicle.workflowText':'Жеткізу барысы соңғы өтінім дерегінен алынады.','vehicle.telemetryNote':'Көлік датчиктері қосылмаған. Орналасу орны мен нақты уақыт телеметриясы көрсетілмейді.','vehicle.openShipments':'Тасымалдар тізімін ашу',
-    'transportations.eyebrow':'ТАСЫМАЛДАРЫҢЫЗ','transportations.subtitle':'Өтінімдерді қарап, жеткізу мәртебесін сүзгі арқылы таңдаңыз.','transportations.filter':'Мәртебе','filter.all':'Барлық мәртебе',
+    'transportations.eyebrow':'ТАСЫМАЛДАРЫҢЫЗ','transportations.subtitle':'Өтінімдерді қарап, жеткізу мәртебесін сүзгі арқылы таңдаңыз.','transportations.filter':'Мәртебе','transportations.count':'Өтінім саны: {count}','transportations.reset':'Барлық мәртебені көрсету','transportations.emptyTitle':'Әзірге тасымал жоқ','transportations.loginTitle':'Тасымалдарыңызды бір жерден бақылаңыз','transportations.filteredTitle':'Бұл мәртебеде әзірге өтінім жоқ','transportations.emptyAction':'Тасымалды жоспарлау','filter.all':'Барлық мәртебе',
     'actions.refresh':'Жаңарту','actions.openTransportations':'Тасымалдарды ашу','actions.cancel':'Өтінімді тоқтату','actions.save':'Сақтау','actions.status':'Мәртебені өзгерту','actions.optionalNote':'Ескерту (міндетті емес)',
     'planning.eyebrow':'ТАСЫМАЛДЫ ҰЙЫМДАСТЫРУ','planning.subtitle':'Өтінім жасаңыз: көлік түрі мен құны деректер қаралғаннан кейін нақтыланады.','planning.asideTitle':'3 қадамда тасымалды жоспарлаңыз','planning.asideText':'Маршрут пен жүк мәліметтерін енгізіп, өтінімді жіберіңіз.','planning.stepOne':'Маршрут пен жүк деректерін енгізіңіз','planning.stepTwo':'Өтінімді жіберіңіз','planning.stepThree':'Мәртебесін бақылаңыз','planning.formKicker':'ЖАҢА ӨТІНІМ','planning.formTitle':'Тасымал деректері','planning.formText':'Жіберілген өтінім нөмірі мен мәртебесі тасымалдар тізімінде сақталады.','planning.loginTitle':'Өтінім үшін жүйеге кіріңіз','planning.loginText':'Жүк тасымалына өтінім жіберу және оны бақылау үшін тіркеліңіз немесе жүйеге кіріңіз.','planning.listKicker':'САҚТАЛҒАН ӨТІНІМДЕР','planning.listTitle':'Жоспарланған тасымалдар','planning.adminKicker':'ӘКІМШІ БАСҚАРУЫ','planning.adminTitle':'Барлық клиент өтінімдері',
     'form.origin':'Қай қаладан','form.destination':'Қай қалаға','form.cargoType':'Жүк түрі','form.choose':'Таңдаңыз','form.weight':'Жүк салмағы (кг)','form.date':'Тасымалдау күні','form.phone':'Байланыс телефоны','form.comment':'Қосымша ақпарат','form.submit':'Өтінім жіберу','form.originPlaceholder':'Мысалы, Алматы','form.destinationPlaceholder':'Мысалы, Астана','form.weightPlaceholder':'500','form.phonePlaceholder':'+7 700 000 00 00','form.commentPlaceholder':'Жүк пен жеткізу туралы мәліметтер',
@@ -42,7 +42,7 @@ const translations = {
     'tracking.empty':'Статус и маршрут появятся здесь после создания первой заявки.','tracking.latest':'Последняя заявка','tracking.from':'Город отправления','tracking.to':'Город доставки',
     'route.originPlaceholder':'Город отправления','route.destinationPlaceholder':'Город доставки','route.from':'Откуда','route.to':'Куда',
     'vehicle.workflowTitle':'Контроль по данным заявки','vehicle.workflowText':'Ход доставки отображается по последнему статусу заявки.','vehicle.telemetryNote':'Датчики транспорта не подключены. Геопозиция и телеметрия в реальном времени недоступны.','vehicle.openShipments':'Открыть список перевозок',
-    'transportations.eyebrow':'ВАШИ ПЕРЕВОЗКИ','transportations.subtitle':'Просматривайте заявки и фильтруйте их по статусу доставки.','transportations.filter':'Статус','filter.all':'Все статусы',
+    'transportations.eyebrow':'ВАШИ ПЕРЕВОЗКИ','transportations.subtitle':'Просматривайте заявки и фильтруйте их по статусу доставки.','transportations.filter':'Статус','transportations.count':'Заявок: {count}','transportations.reset':'Показать все статусы','transportations.emptyTitle':'Перевозок пока нет','transportations.loginTitle':'Следите за перевозками в одном месте','transportations.filteredTitle':'Для этого статуса пока нет заявок','transportations.emptyAction':'Запланировать перевозку','filter.all':'Все статусы',
     'actions.refresh':'Обновить','actions.openTransportations':'Открыть перевозки','actions.cancel':'Отменить заявку','actions.save':'Сохранить','actions.status':'Изменить статус','actions.optionalNote':'Комментарий (необязательно)',
     'planning.eyebrow':'ОРГАНИЗАЦИЯ ПЕРЕВОЗКИ','planning.subtitle':'Создайте заявку: тип транспорта и стоимость уточним после проверки данных.','planning.asideTitle':'Оформите перевозку за 3 шага','planning.asideText':'Укажите маршрут и груз, затем отправьте заявку.','planning.stepOne':'Введите маршрут и параметры груза','planning.stepTwo':'Отправьте заявку','planning.stepThree':'Следите за статусом','planning.formKicker':'НОВАЯ ЗАЯВКА','planning.formTitle':'Детали перевозки','planning.formText':'После отправки номер заявки и её статус появятся в списке перевозок.','planning.loginTitle':'Войдите, чтобы оставить заявку','planning.loginText':'Зарегистрируйтесь или войдите, чтобы заказать перевозку и следить за её ходом.','planning.listKicker':'СОХРАНЁННЫЕ ЗАЯВКИ','planning.listTitle':'Запланированные перевозки','planning.adminKicker':'УПРАВЛЕНИЕ АДМИНИСТРАТОРА','planning.adminTitle':'Заявки клиентов',
     'form.origin':'Откуда','form.destination':'Куда','form.cargoType':'Тип груза','form.choose':'Выберите','form.weight':'Вес груза (кг)','form.date':'Дата перевозки','form.phone':'Контактный телефон','form.comment':'Дополнительная информация','form.submit':'Отправить заявку','form.originPlaceholder':'Например, Алматы','form.destinationPlaceholder':'Например, Астана','form.weightPlaceholder':'500','form.phonePlaceholder':'+7 700 000 00 00','form.commentPlaceholder':'Детали о грузе и доставке',
@@ -266,6 +266,13 @@ function trackingMarkup(item) {
   return '<div class="tracking-content"><div class="tracking-number-row"><div><small>' + escapeHtml(t('tracking.latest')) + '</small><strong>' + escapeHtml(item.request_number) + '</strong></div>' + statusBadge(item.status) + '</div>' +
     '<div class="tracking-route"><div><small>' + escapeHtml(t('tracking.from')) + '</small><strong>' + escapeHtml(item.origin) + '</strong></div><div><small>' + escapeHtml(t('tracking.to')) + '</small><strong>' + escapeHtml(item.destination) + '</strong></div></div></div>';
 }
+function transportationEmptyMarkup(filteredOut) {
+  if (filteredOut) {
+    return '<div class="transport-empty panel"><span class="transport-empty-icon" aria-hidden="true">⌕</span><div><strong>' + escapeHtml(t('transportations.filteredTitle')) + '</strong><p>' + escapeHtml(t('empty.filter')) + '</p></div><button class="btn btn-outline" type="button" data-reset-transport-filter>' + escapeHtml(t('transportations.reset')) + '</button></div>';
+  }
+  const guest = !state.user;
+  return '<div class="transport-empty panel"><span class="transport-empty-icon" aria-hidden="true">↗</span><div><strong>' + escapeHtml(t(guest ? 'transportations.loginTitle' : 'transportations.emptyTitle')) + '</strong><p>' + escapeHtml(t(guest ? 'empty.login' : 'empty.requests')) + '</p></div><a class="btn btn-primary" href="#planning">' + escapeHtml(t('transportations.emptyAction')) + '<span aria-hidden="true">→</span></a></div>';
+}
 function renderData() {
   const rows = state.requests;
   const latest = rows[0] || null;
@@ -284,11 +291,11 @@ function renderData() {
   const transportList = $('#transportationsList');
   const filter = $('#transportStatusFilter').value;
   const shown = filter === 'all' ? customerRows : customerRows.filter((item) => item.status === filter);
-  const emptyKey = !state.user ? 'empty.login' : (customerRows.length ? 'empty.filter' : 'empty.requests');
-  const markup = shown.length ? shown.map((item) => requestCard(item, false)).join('') : '<p class="empty-state panel">' + escapeHtml(t(emptyKey)) + '</p>';
+  const filteredOut = customerRows.length > 0 && shown.length === 0;
+  const markup = shown.length ? shown.map((item) => requestCard(item, false)).join('') : transportationEmptyMarkup(filteredOut);
   planningList.innerHTML = customerRows.length ? customerRows.map((item) => requestCard(item, false)).join('') : '<p class="empty-state">' + escapeHtml(t(state.user ? 'empty.requests' : 'empty.login')) + '</p>';
   transportList.innerHTML = markup;
-  $('#transportResultsCount').textContent = String(shown.length);
+  $('#transportResultsCount').textContent = t('transportations.count', {count:shown.length});
   const adminRows = state.user && state.user.role === 'admin' ? rows : [];
   $('#adminRequests').innerHTML = adminRows.length ? adminRows.map((item) => requestCard(item, true)).join('') : '<p class="empty-state">' + escapeHtml(t('empty.admin')) + '</p>';
 }
@@ -410,6 +417,11 @@ function bindEvents() {
   $('#refreshPlanning').addEventListener('click', refreshRequests);
   $('#transportStatusFilter').addEventListener('change', renderData);
   document.addEventListener('click', (event) => {
+    const resetFilter = event.target.closest('[data-reset-transport-filter]');
+    if (resetFilter) {
+      $('#transportStatusFilter').value = 'all';
+      renderData();
+    }
     const cancel = event.target.closest('[data-cancel]');
     if (cancel) cancelRequest(cancel.dataset.cancel);
     const update = event.target.closest('[data-update]');
