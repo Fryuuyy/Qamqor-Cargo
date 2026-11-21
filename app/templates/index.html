@@ -1,49 +1,235 @@
 <!doctype html>
-<html lang="kk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f7f5"><title>Qamqor Cargo — Logistics Workspace</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/static/css/style.css"><style>
-:root{--orange:#ff681f;--ink:#17191d;--muted:#858991;--line:#e9e9e7;--paper:#f7f7f5}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}.app-shell{max-width:1440px;margin:auto;padding:22px 28px}.topbar{height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 22px;box-shadow:0 8px 30px #18202b08}.brand{display:flex;align-items:center;gap:9px;font-weight:800;color:#15171a;text-decoration:none;white-space:nowrap}.brand-mark{background:#17191d;color:white;border-radius:9px;padding:7px 10px}.brand-light{font-weight:500;margin-left:3px}.main-nav{display:flex;gap:6px}.nav-link{color:#4e5259;text-decoration:none;font-size:13px;padding:11px 15px;border-radius:12px}.nav-link.active,.btn-primary{background:var(--orange);color:white}.top-tools{display:flex;align-items:center;gap:8px}.icon-button,.avatar,.tiny-icon{border:0;background:#f3f3f1;border-radius:10px;padding:9px;cursor:pointer}.avatar{background:#25282d;color:white}.workspace{display:grid;grid-template-columns:290px 1fr;gap:20px;margin-top:20px}.left-rail{display:flex;flex-direction:column;gap:14px}.quick-tabs{display:flex;gap:9px}.quick-tab{background:white;border-radius:12px;padding:10px 14px}.quick-tab.selected{background:var(--orange);color:white}.vehicle-mini,.panel{background:#fff;border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:0 8px 24px #1a202808}.vehicle-mini{display:flex;justify-content:space-between;align-items:center;min-height:78px}.vehicle-mini strong,.vehicle-mini small{display:block}.vehicle-mini small,.panel-title small{color:var(--muted);font-size:11px;margin-top:5px}.live-pill{display:inline-flex;align-items:center;gap:5px;font-size:10px;color:#4b9b56;margin-left:8px}.live-pill i,.live-dot{width:7px;height:7px;border-radius:50%;background:#63ce65;display:inline-block}.mini-truck{font-size:33px}.panel-title{display:flex;align-items:center;gap:10px;margin-bottom:16px}.panel-title strong,.panel-title small{display:block}.panel-icon{width:31px;height:31px;display:grid;place-items:center;background:#f3f3f1;border-radius:9px}.panel-actions{display:flex;gap:8px;margin-bottom:15px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:11px;padding:10px 13px;font:600 12px 'DM Sans';text-decoration:none;cursor:pointer}.btn-dark{background:#202328;color:white}.btn-soft,.btn-outline{background:#f3f3f1;color:#3c4046}.list-head,.shipment-row{display:grid;grid-template-columns:24px 1fr auto;gap:8px;align-items:center;padding:9px 0;font-size:11px;border-bottom:1px solid #f0f0ee}.list-head{color:#9b9da2}.shipment-row .status{font-size:10px}.status{display:inline-flex;align-items:center;border-radius:20px;padding:5px 8px;background:#eef8ef;color:#4a9d56;font-size:11px}.status.pending{background:#fff4e9;color:#d77a36}.status.cancelled{background:#fff0f0;color:#c65b5b}.empty-mini{font-size:12px;color:#9b9da2;padding:14px 0}.left-help p{font-size:12px;color:#777e86;line-height:1.6}.left-help a{font-size:12px;color:var(--orange);text-decoration:none}.main-stage{min-width:0}.stage-heading{display:flex;justify-content:space-between;align-items:flex-end;padding:10px 8px 16px}.eyebrow{font-size:10px;letter-spacing:1.6px;color:#a0a2a5;font-weight:700}.stage-heading h1,.request-intro h2{font:800 clamp(25px,3vw,39px) Manrope;margin:8px 0}.stage-heading em,.request-intro em{color:var(--orange);font-style:normal}.stage-heading p,.request-intro p{color:#858991;font-size:13px}.stage-date{font-size:11px;color:#73777d;white-space:nowrap}.truck-scene{height:345px;position:relative;overflow:hidden;border-radius:18px;background:linear-gradient(115deg,#fff 0%,#f1f1ef 60%,#e9e9e6 100%);border:1px solid var(--line)}.scene-grid{position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,#ddd 50%,transparent 50.2%),linear-gradient(0deg,transparent 49.8%,#ddd 50%,transparent 50.2%);background-size:90px 90px;opacity:.23}.truck-image{position:absolute;left:13%;bottom:22px;width:76%;height:74%;object-fit:contain;filter:drop-shadow(0 20px 12px #0002)}.cargo-label{position:absolute;z-index:2;top:18px;width:112px;height:105px;border:1px solid #dededb;background:#ffffffd9;border-radius:12px;padding:11px;display:flex;flex-direction:column;justify-content:space-between}.cargo-label b{font-size:11px}.cargo-label span{font-size:9px;color:#66bd64}.cargo-label span i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#6bd56c}.cargo-label small{color:#a0a2a5}.cargo-label strong{font-size:11px}.label-one{right:260px}.label-two{right:135px}.label-three{right:10px}.cargo-label .plus{font-size:25px;text-align:center;color:#555}.scene-caption{position:absolute;left:17px;bottom:16px;background:#ffffffdc;border:1px solid #eee;border-radius:12px;padding:10px 14px;display:flex;gap:10px;align-items:center}.scene-caption small,.scene-caption strong{display:block}.scene-caption small{color:#96999e;font-size:9px}.scene-caption strong{font-size:11px}.scene-icon{background:var(--orange);color:white;border-radius:8px;padding:8px}.caption-arrow{color:var(--orange)}.stage-footnote{display:flex;justify-content:space-between;padding:12px 5px;color:#a1a3a7;font-size:9px;letter-spacing:1px}.bottom-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}.bottom-grid .panel{min-width:0}.driver-row{display:flex;align-items:center;gap:10px}.driver-avatar{width:33px;height:33px;border-radius:50%;background:#f5e6dc;color:#b66b42;display:grid;place-items:center}.driver-row strong,.driver-row small{display:block}.driver-row small,.info-stats small,.metric-summary small,.tracking-id small,.timeline small,.route-footer small{color:#9a9da2;font-size:10px}.driver-row .tiny-icon{margin-left:auto}.info-stats,.metric-summary{display:flex;justify-content:space-between;gap:8px;margin:17px 0}.info-stats strong,.metric-summary strong{display:block;font-size:13px;margin-top:5px}.panel-buttons{display:flex;gap:7px}.panel-buttons .btn{flex:1;font-size:10px}.tracking-id{position:relative;padding:4px 0 12px}.tracking-id strong{display:block;font-size:17px;margin-top:5px}.tracking-id .status{position:absolute;right:0;top:10px}.timeline{border-left:1px solid #e5e5e2;margin-left:6px;padding-left:16px}.timeline-step{position:relative;padding:0 0 14px}.timeline-step>span{position:absolute;left:-21px;top:2px;width:10px;height:10px;border:2px solid var(--orange);background:white;border-radius:50%}.timeline-step strong{display:block;font-size:11px;margin-top:4px}.tracking-hint{font-size:10px;color:#9a9da2}.route-map{height:112px;background:linear-gradient(135deg,#edf0ed,#e3e8e3);border-radius:12px;position:relative;overflow:hidden}.map-lines{position:absolute;inset:0;background:repeating-linear-gradient(25deg,transparent 0 19px,#fff 20px 22px,transparent 23px 42px),repeating-linear-gradient(115deg,transparent 0 31px,#fff 32px 34px,transparent 35px 62px)}.map-pin{position:absolute;width:10px;height:10px;background:var(--orange);border:3px solid white;border-radius:50%;z-index:2}.pin-start{left:25%;top:60%}.pin-end{right:22%;top:25%;background:#23272c}.route-path{position:absolute;left:27%;top:42%;width:50%;height:30px;border-top:2px dashed var(--orange);transform:rotate(-20deg)}.map-city{position:absolute;font-size:8px;background:#fff;padding:4px;border-radius:4px}.city-start{left:7%;bottom:8px}.city-end{right:5%;top:7px}.route-footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px}.route-footer strong{display:block;font-size:10px;margin-top:4px}.route-footer>span{color:var(--orange)}.bar-chart{height:82px;display:flex;align-items:flex-end;gap:7px;border-bottom:1px solid #eee}.bar-chart i{flex:1;background:#ff6c2b;border-radius:5px 5px 0 0;min-width:4px}.bar-chart i:nth-child(even){background:#e9efeb}.chart-caption{display:block;color:#a0a2a5;font-size:9px;margin-top:8px}.section{margin-top:30px;padding:28px;background:white;border:1px solid var(--line);border-radius:18px}.request-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px}.request-tip{margin-top:22px;color:#777;font-size:11px}.request-panel{background:#fafaf9;border-radius:15px;padding:20px}.guest-state{text-align:center;padding:25px 10px}.guest-state p{font-size:12px;color:#858991}.lock-icon{font-size:27px}.button-row{display:flex;justify-content:center;gap:8px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.form-grid label,.auth-form label{display:flex;flex-direction:column;gap:6px;font-size:11px;color:#666}.form-grid input,.form-grid select,.form-grid textarea,.auth-form input,.request-controls input,.request-controls select{width:100%;border:1px solid #e2e2df;border-radius:9px;padding:11px;background:white;font:12px 'DM Sans'}.full-field{grid-column:1/-1}.hidden{display:none!important}.account-head{display:flex;justify-content:space-between;align-items:center}.account-head h2{margin:7px 0 18px}.request-list{display:grid;gap:10px}.request-item{display:flex;justify-content:space-between;gap:15px;border:1px solid #eee;border-radius:12px;padding:14px}.request-item h3{font-size:13px}.request-item p{font-size:11px;color:#858991}.request-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.request-controls input,.request-controls select{width:auto;max-width:150px}.modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center}.modal-backdrop{position:absolute;inset:0;background:#10131988}.modal-card{position:relative;background:white;border-radius:18px;padding:28px;width:min(420px,calc(100% - 30px));box-shadow:0 20px 70px #0003}.modal-close{position:absolute;right:15px;top:12px;border:0;background:none;font-size:25px;cursor:pointer}.auth-form{display:grid;gap:13px;margin-top:18px}.modal-switch{font-size:12px;color:#888}.modal-switch button{border:0;background:none;color:var(--orange);cursor:pointer}.toast{position:fixed;bottom:20px;right:20px;background:#20384b;color:white;padding:12px 18px;border-radius:10px;opacity:0;pointer-events:none;transition:.2s;z-index:30}.toast.show{opacity:1}footer{display:flex;justify-content:space-between;align-items:center;padding:25px 5px;color:#9b9da2;font-size:10px}footer p{margin:0}
-@media(max-width:1050px){.main-nav{display:none}.bottom-grid{grid-template-columns:repeat(2,1fr)}.workspace{grid-template-columns:250px 1fr}.truck-image{left:4%;width:90%}}@media(max-width:700px){.app-shell{padding:10px}.topbar{padding:0 12px;height:58px}.top-register{display:none}.workspace{grid-template-columns:1fr}.left-rail{display:grid;grid-template-columns:1fr}.left-help{display:none}.truck-scene{height:260px}.cargo-label{transform:scale(.8);transform-origin:top right}.label-one{right:170px}.label-two{right:88px}.label-three{right:3px}.truck-image{left:0;width:100%;height:65%;bottom:20px}.stage-heading{align-items:flex-start;gap:10px}.stage-date{font-size:9px}.bottom-grid{grid-template-columns:1fr 1fr;gap:8px}.bottom-grid .panel{padding:12px}.info-stats,.metric-summary{flex-wrap:wrap}.request-section{grid-template-columns:1fr;padding:18px}.form-grid{grid-template-columns:1fr}.full-field{grid-column:auto}.request-item{display:block}.request-controls{margin-top:10px}footer{flex-wrap:wrap;gap:10px}footer p{width:100%}}
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <title>Qamqor Cargo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="app-frame">
+    <header class="topbar">
+      <a class="brand" href="#dashboard" aria-label="Qamqor Cargo">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 4v24M4 16h24M7.5 7.5l17 17m0-17-17 17" /></svg></span>
+        <span class="brand-name">Qamqor <span>Cargo</span></span>
+      </a>
+      <nav class="main-nav" data-i18n-aria="nav.aria" aria-label="Main navigation">
+        <a class="nav-link is-active" href="#dashboard" data-view="dashboard" data-i18n="nav.dashboard"></a>
+        <a class="nav-link" href="#transportations" data-view="transportations" data-i18n="nav.transportations"></a>
+        <a class="nav-link" href="#planning" data-view="planning" data-i18n="nav.planning"></a>
+        <a class="nav-link" href="#rates" data-view="rates" data-i18n="nav.rates"></a>
+        <a class="nav-link" href="#settings" data-view="settings" data-i18n="nav.settings"></a>
+      </nav>
+      <div class="top-actions">
+        <label class="language-control">
+          <span class="sr-only" data-i18n="language.label"></span>
+          <select id="languageSelect" data-i18n-aria="language.label" aria-label="Language">
+            <option value="kk">ҚАЗ</option>
+            <option value="ru">РУС</option>
+          </select>
+        </label>
+        <div id="guestActions" class="auth-actions">
+          <button class="btn btn-quiet" id="loginOpen" data-i18n="auth.login"></button>
+          <button class="btn btn-primary" id="registerOpen" data-i18n="auth.register"></button>
+        </div>
+        <button class="profile-button hidden" id="accountButton" type="button">
+          <span class="profile-avatar" aria-hidden="true">Q</span>
+          <span id="profileLabel"></span>
+        </button>
+      </div>
+    </header>
 
-/* Responsive correction: hero first, compact cards, branded vehicle visual */
-@media(max-width:700px){
-  .workspace{display:flex!important;flex-direction:column!important;gap:14px!important}
-  .main-stage{order:0!important;width:100%}
-  .left-rail{order:2!important;width:100%;display:flex!important}
-  .truck-scene{height:245px!important;border-radius:20px!important}
-  .truck-image{position:absolute!important;display:block!important;left:5%!important;bottom:12px!important;width:90%!important;height:66%!important;object-fit:contain!important}
-  .cargo-label{width:82px!important;height:82px!important;top:12px!important;padding:8px!important;transform:none!important}
-  .label-one{right:178px!important}.label-two{right:92px!important}.label-three{right:6px!important}
-  .cargo-label small{font-size:8px!important}.cargo-label strong{font-size:9px!important}
-  .stage-heading{padding:6px 2px 12px!important}
-  .stage-heading h1{font-size:clamp(27px,8vw,36px)!important;letter-spacing:-1.2px!important;line-height:1.15!important}
-  .stage-heading p{font-size:13px!important;line-height:1.55!important}
-  .bottom-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
-  .bottom-grid .panel{padding:13px!important;min-width:0!important}
-  .panel-title{gap:8px!important;margin-bottom:12px!important}
-  .panel-title strong{font-size:13px!important;line-height:1.3!important;font-weight:700!important}
-  .panel-title small{font-size:10px!important}
-  .info-stats strong,.metric-summary strong{font-size:12px!important}
-  .request-section{margin-top:18px!important;padding:18px!important}
-  .request-intro h2{font-size:27px!important;line-height:1.2!important;letter-spacing:-.8px!important}
-  .guest-state{padding:22px 8px!important}
-  .guest-state h3{font-size:19px!important;line-height:1.3!important}
-  .guest-state p{font-size:13px!important;line-height:1.55!important}
-  .section{border-radius:16px!important}
-}
-@media(max-width:390px){
-  .bottom-grid{grid-template-columns:1fr!important}
-  .cargo-label{width:76px!important}
-  .label-one{right:162px!important}.label-two{right:82px!important}
-  .stage-date{display:none!important}
-}
-</style></head><body><div class="app-shell">
-<header class="topbar"><a class="brand" href="/"><span class="brand-mark">✳</span><span>Qamqor<span class="brand-light">Cargo</span></span></a><nav class="main-nav"><a class="nav-link active" href="#dashboard">Басты бет</a><a class="nav-link" href="#transportation">Тасымалдау</a><a class="nav-link" href="#planning">Жоспарлау</a><a class="nav-link" href="#request">Тарифтер</a><a class="nav-link" href="#settings">Баптаулар</a></nav><div class="top-tools"><button class="icon-button">⌕</button><button class="icon-button">♧</button><button class="avatar" id="loginOpen">Q</button><button class="btn btn-primary top-register" id="registerOpen">Тіркелу</button></div></header>
-<main id="dashboard"><section class="workspace"><aside class="left-rail"><div class="quick-tabs"><span class="quick-tab selected">▣</span><span class="quick-tab">⬡</span><span class="quick-tab">↗</span></div><article class="vehicle-mini"><div><strong>Qamqor Cargo</strong><span class="live-pill"><i></i> Онлайн платформа</span><small>Қалааралық тасымал</small></div><div class="mini-truck">🚚</div></article><section class="panel" id="planning"><div class="panel-title"><span class="panel-icon">⬡</span><div><strong>Жүк жоспарлары</strong><small>Өтінімдер тізімі</small></div></div><div class="panel-actions"><a class="btn btn-dark" href="#request">Жаңа өтінім ＋</a><button class="btn btn-soft" id="refreshAdmin">Жаңарту ↻</button></div><div class="list-head"><span>№</span><span>Бағыт</span><span>Мәртебе</span></div><div id="dashboardShipments"><div class="empty-mini">Өтінімдеріңіз осы жерде көрсетіледі</div></div></section><section class="panel left-help"><div class="panel-title"><span class="panel-icon">ⓘ</span><strong>Qamqor қолдауы</strong></div><p>Тасымалдау туралы сұрағыңыз болса, өтінім қалдырыңыз немесе жүйеге кіріңіз.</p><a href="#request">Өтінім беру ↗</a></section></aside>
-<section class="main-stage" id="transportation"><div class="stage-heading"><div><span class="eyebrow">LOGISTICS WORKSPACE</span><h1>Тасымалдауды <em>басқару</em></h1><p>Жүк өтінімдері мен жеткізу барысын бір кеңістікте бақылаңыз.</p></div><div class="stage-date"><span class="live-dot"></span> Жүйе қолжетімді</div></div><div class="truck-scene"><div class="scene-grid"></div><div class="cargo-label label-one"><b>A1</b><span><i></i> Дайын</span><small>Жүк орны</small><strong>QCG — 01</strong></div><div class="cargo-label label-two"><b>A2</b><span class="plus">＋</span><small>Жаңа өтінім</small><strong>Жүк қосу</strong></div><div class="cargo-label label-three"><b>A3</b><span><i></i> Бақылау</span><small>Бағыт</small><strong>QCG — 03</strong></div><img class="truck-image" src="/static/images/qamqor-truck.svg" alt="Qamqor Cargo жүк көлігі" loading="eager"><div class="scene-caption"><span class="scene-icon">↗</span><div><small>Тасымалдау платформасы</small><strong>Жүк қозғалысын бақылау</strong></div><span class="caption-arrow">→</span></div></div><div class="stage-footnote"><span>01 / Тасымалдау</span><span>QAMQOR CARGO · ЖҮК ЛОГИСТИКАСЫ</span></div></section></section>
-<section class="bottom-grid"><article class="panel info-panel"><div class="panel-title"><span class="panel-icon">▤</span><div><strong>Тасымалдау ақпараты</strong><small>Жеке кабинет</small></div></div><div class="driver-row"><div class="driver-avatar">Q</div><div><strong id="profileName">Қонақ пайдаланушы</strong><small id="profileRole">Жүйеге кірмеген</small></div><button class="tiny-icon" id="requestLogin">↗</button></div><div class="info-stats"><div><small>Өтінім нөмірі</small><strong id="latestRequestId">—</strong></div><div><small>Мәртебесі</small><strong id="latestRequestStatus">—</strong></div><div><small>Жасалған күні</small><strong id="latestRequestDate">—</strong></div></div><div class="panel-buttons"><a class="btn btn-soft" href="#request">Бағытты өзгерту</a><a class="btn btn-soft" href="#request">Жаңа өтінім</a></div></article>
-<article class="panel tracking-panel"><div class="panel-title"><span class="panel-icon">⌕</span><div><strong>Өтінімді бақылау</strong><small>Tracking details</small></div></div><div class="tracking-id"><small>Соңғы өтінім</small><strong id="trackingNumber">Өтінім әлі жоқ</strong><span class="status pending" id="trackingStatus">Күтілуде</span></div><div class="timeline"><div class="timeline-step current"><span></span><div><small>Бастапқы нүкте</small><strong id="trackingOrigin">—</strong></div></div><div class="timeline-step"><span></span><div><small>Жеткізу нүктесі</small><strong id="trackingDestination">—</strong></div></div></div><p class="tracking-hint">Өтінім мәртебесі әкімші жаңартқан кезде өзгереді.</p></article>
-<article class="panel route-panel"><div class="panel-title"><span class="panel-icon">⌁</span><div><strong>Бағыт ақпараты</strong><small>Route transportation</small></div></div><div class="route-map"><div class="map-lines"></div><span class="map-pin pin-start"></span><span class="map-pin pin-end"></span><div class="route-path"></div><span class="map-city city-start" id="mapOrigin">Бастапқы қала</span><span class="map-city city-end" id="mapDestination">Жеткізу қаласы</span></div><div class="route-footer"><div><small>Қайдан</small><strong id="routeOrigin">—</strong></div><span>→</span><div><small>Қайда</small><strong id="routeDestination">—</strong></div></div></article>
-<article class="panel metrics-panel"><div class="panel-title"><span class="panel-icon">▥</span><div><strong>Өтінім статистикасы</strong><small>Жеке белсенділік</small></div></div><div class="metric-summary"><div><small>Барлық өтінім</small><strong id="metricTotal">0</strong></div><div><small>Жолда</small><strong id="metricTransit">0</strong></div><div><small>Жеткізілді</small><strong id="metricDelivered">0</strong></div></div><div class="bar-chart"><i style="height:25%"></i><i style="height:42%"></i><i style="height:31%"></i><i style="height:58%"></i><i style="height:37%"></i><i style="height:73%"></i><i style="height:48%"></i><i style="height:88%"></i><i style="height:61%"></i><i style="height:78%"></i><i style="height:54%"></i><i style="height:94%"></i></div><small class="chart-caption">Көрнекі индикатор · нақты сандар жоғарыда</small></article></section>
-<section class="section request-section" id="request"><div class="request-intro"><span class="eyebrow">ОНЛАЙН ӨТІНІМ</span><h2>Жүк тасымалдауға<br><em>тапсырыс беріңіз</em></h2><p>Бағыт пен жүк туралы ақпаратты толтырыңыз. Өтінім жеке кабинетіңізде сақталады.</p><div class="request-tip">ⓘ Баға мен көлік түрі өтінімді қарау кезінде нақтыланады.</div></div><div class="request-panel"><div id="requestGuest" class="guest-state"><div class="lock-icon">⌑</div><h3>Жеке кабинетке кіріңіз</h3><p>Өтінім қалдыру үшін алдымен тіркелу немесе жүйеге кіру қажет.</p><div class="button-row"><button class="btn btn-primary" id="requestLoginButton">Кіру</button><button class="btn btn-outline" id="requestRegister">Тіркелу</button></div></div><form id="requestForm" class="form-grid hidden"><label>Қай қаладан<input name="origin" required minlength="2" maxlength="120" placeholder="Мысалы, Көкшетау"></label><label>Қай қалаға<input name="destination" required minlength="2" maxlength="120" placeholder="Мысалы, Астана"></label><label>Жүк түрі<select name="cargo_type" required><option value="">Таңдаңыз</option><option>Жиһаз</option><option>Құрылыс материалдары</option><option>Азық-түлік</option><option>Тұрмыстық техника</option><option>Басқа</option></select></label><label>Жүк салмағы (кг)<input name="weight_kg" type="number" min="0.1" max="50000" step="0.1" required placeholder="500"></label><label>Тасымалдау күні<input name="transport_date" type="date" required></label><label>Телефон<input name="phone" type="tel" required minlength="7" maxlength="30" placeholder="+7 700 000 00 00"></label><label class="full-field">Қосымша ақпарат<textarea name="comment" rows="3" maxlength="1000" placeholder="Жүк туралы қосымша мәлімет..."></textarea></label><button class="btn btn-primary full-field" type="submit">Өтінім жіберу →</button></form></div></section>
-<section class="section account-section hidden" id="account"><div class="account-head"><div><span class="eyebrow">ЖЕКЕ КАБИНЕТ</span><h2>Менің өтінімдерім</h2></div><button class="btn btn-outline" id="logoutButton">Шығу</button></div><div id="myRequests" class="request-list"></div></section><section class="section admin-section hidden" id="admin"><div class="account-head"><div><span class="eyebrow">БАСҚАРУ</span><h2>Өтінімдерді басқару</h2></div><button class="btn btn-outline" id="adminRefresh">Жаңарту</button></div><div id="adminRequests" class="request-list"></div></section></main>
-<footer><a class="brand" href="/"><span class="brand-mark">✳</span><span>Qamqor<span class="brand-light">Cargo</span></span></a><p>Жүк тасымалдау өтінімдерін басқару платформасы</p><span>© 2026 Qamqor Cargo</span></footer></div>
-<div class="modal hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-backdrop" data-close="true"></div><div class="modal-card"><button class="modal-close" id="modalClose">×</button><span class="eyebrow">QAMQOR CARGO</span><h2 id="modalTitle">Жүйеге кіру</h2><form id="authForm" class="auth-form"><div id="registerNameWrap" class="hidden"><label>Аты-жөні<input name="full_name" minlength="2" maxlength="120"></label></div><div id="registerPhoneWrap" class="hidden"><label>Телефон<input name="phone" minlength="7" maxlength="30"></label></div><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Құпиясөз<input name="password" type="password" required minlength="8" autocomplete="current-password"></label><button class="btn btn-primary" type="submit" id="authSubmit">Кіру</button></form><p class="modal-switch" id="authSwitch">Аккаунтыңыз жоқ па? <button type="button" id="switchAuth">Тіркелу</button></p></div></div><div class="toast" id="toast" role="status" aria-live="polite"></div><script src="/static/js/app.js" defer></script></body></html>
+    <main class="main-content">
+      <section class="screen is-active" id="view-dashboard" data-screen="dashboard">
+        <div class="screen-heading">
+          <div>
+            <span class="eyebrow" data-i18n="dashboard.eyebrow"></span>
+            <h1><span data-i18n="dashboard.title"></span> <em data-i18n="dashboard.titleAccent"></em></h1>
+            <p data-i18n="dashboard.subtitle"></p>
+          </div>
+          <span class="service-status"><i></i><span data-i18n="dashboard.online"></span></span>
+        </div>
+        <article class="hero-card">
+          <img class="hero-truck" src="/static/images/hero-truck.jpg" alt="" fetchpriority="high">
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <span class="hero-kicker" data-i18n="dashboard.heroKicker"></span>
+            <h2 data-i18n="dashboard.heroTitle"></h2>
+            <p data-i18n="dashboard.heroText"></p>
+            <button class="btn btn-primary btn-large" type="button" data-navigate="planning"><span data-i18n="dashboard.createShipment"></span><span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="hero-tag"><span class="hero-tag-icon">Q</span><span><small data-i18n="brand.label"></small><strong>Qamqor Cargo</strong></span></div>
+        </article>
+        <div class="dashboard-metrics" data-i18n-aria="dashboard.metricsAria" aria-label="Shipment summary">
+          <article class="metric-card"><span class="metric-icon orange">↗</span><div><small data-i18n="metrics.total"></small><strong id="metricTotal">0</strong></div></article>
+          <article class="metric-card"><span class="metric-icon blue">⌁</span><div><small data-i18n="metrics.inTransit"></small><strong id="metricTransit">0</strong></div></article>
+          <article class="metric-card"><span class="metric-icon green">✓</span><div><small data-i18n="metrics.delivered"></small><strong id="metricDelivered">0</strong></div></article>
+          <article class="metric-card"><span class="metric-icon slate">◷</span><div><small data-i18n="metrics.pending"></small><strong id="metricPending">0</strong></div></article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel shipment-info-panel">
+            <div class="panel-heading">
+              <div><span class="eyebrow" data-i18n="card.shipmentInfo.kicker"></span><h2 data-i18n="card.shipmentInfo.title"></h2></div>
+              <button class="icon-button" type="button" data-navigate="transportations" data-i18n-aria="actions.openTransportations" aria-label="Open transportations">↗</button>
+            </div>
+            <div class="shipment-summary" id="dashboardLatest"></div>
+          </article>
+          <article class="panel tracking-panel">
+            <div class="panel-heading"><div><span class="eyebrow" data-i18n="card.tracking.kicker"></span><h2 data-i18n="card.tracking.title"></h2></div><span class="tracking-mark">⌖</span></div>
+            <div id="trackingDetails" class="tracking-empty" data-i18n="tracking.empty"></div>
+          </article>
+          <article class="panel route-panel">
+            <div class="panel-heading"><div><span class="eyebrow" data-i18n="card.route.kicker"></span><h2 data-i18n="card.route.title"></h2></div><span class="tracking-mark">⌁</span></div>
+            <div class="route-map" aria-hidden="true"><span class="map-road road-one"></span><span class="map-road road-two"></span><span class="route-line"></span><i class="route-pin pin-origin"></i><i class="route-pin pin-destination"></i><span class="map-label origin-label" id="mapOrigin" data-i18n="route.originPlaceholder"></span><span class="map-label destination-label" id="mapDestination" data-i18n="route.destinationPlaceholder"></span></div>
+            <div class="route-summary"><div><small data-i18n="route.from"></small><strong id="routeOrigin">—</strong></div><span class="route-arrow">→</span><div><small data-i18n="route.to"></small><strong id="routeDestination">—</strong></div></div>
+          </article>
+          <article class="panel vehicle-panel">
+            <div class="panel-heading"><div><span class="eyebrow" data-i18n="card.vehicle.kicker"></span><h2 data-i18n="card.vehicle.title"></h2></div><span class="vehicle-symbol">◉</span></div>
+            <div class="vehicle-status"><span class="vehicle-status-icon">✓</span><div><strong data-i18n="vehicle.workflowTitle"></strong><small data-i18n="vehicle.workflowText"></small></div></div>
+            <div class="vehicle-note"><span class="note-dot"></span><span data-i18n="vehicle.telemetryNote"></span></div>
+            <button class="text-button" type="button" data-navigate="transportations"><span data-i18n="vehicle.openShipments"></span><span aria-hidden="true">→</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen" id="view-transportations" data-screen="transportations">
+        <div class="screen-heading page-heading">
+          <div><span class="eyebrow" data-i18n="transportations.eyebrow"></span><h1 data-i18n="nav.transportations"></h1><p data-i18n="transportations.subtitle"></p></div>
+          <button class="btn btn-outline" id="refreshTransportations" type="button"><span aria-hidden="true">↻</span><span data-i18n="actions.refresh"></span></button>
+        </div>
+        <div class="panel filters-panel">
+          <label class="filter-label"><span data-i18n="transportations.filter"></span>
+            <select id="transportStatusFilter">
+              <option value="all" data-i18n="filter.all"></option>
+              <option value="pending" data-i18n="status.pending"></option>
+              <option value="confirmed" data-i18n="status.confirmed"></option>
+              <option value="in_transit" data-i18n="status.in_transit"></option>
+              <option value="delivered" data-i18n="status.delivered"></option>
+              <option value="cancelled" data-i18n="status.cancelled"></option>
+            </select>
+          </label>
+          <span class="results-count" id="transportResultsCount"></span>
+        </div>
+        <div id="transportationsList" class="request-list"></div>
+      </section>
+
+      <section class="screen" id="view-planning" data-screen="planning">
+        <div class="screen-heading page-heading">
+          <div><span class="eyebrow" data-i18n="planning.eyebrow"></span><h1 data-i18n="nav.planning"></h1><p data-i18n="planning.subtitle"></p></div>
+        </div>
+        <div class="planning-layout">
+          <aside class="planning-aside panel">
+            <span class="panel-icon-large">＋</span>
+            <h2 data-i18n="planning.asideTitle"></h2>
+            <p data-i18n="planning.asideText"></p>
+            <div class="planning-steps">
+              <div><span>01</span><strong data-i18n="planning.stepOne"></strong></div>
+              <div><span>02</span><strong data-i18n="planning.stepTwo"></strong></div>
+              <div><span>03</span><strong data-i18n="planning.stepThree"></strong></div>
+            </div>
+          </aside>
+          <div class="panel request-panel">
+            <div id="requestGuest" class="guest-state">
+              <span class="guest-icon">Q</span>
+              <h2 data-i18n="planning.loginTitle"></h2>
+              <p data-i18n="planning.loginText"></p>
+              <div class="button-row">
+                <button class="btn btn-primary" id="requestLoginButton" type="button" data-i18n="auth.login"></button>
+                <button class="btn btn-outline" id="requestRegisterButton" type="button" data-i18n="auth.register"></button>
+              </div>
+            </div>
+            <form id="requestForm" class="form-grid hidden">
+              <label><span data-i18n="form.origin"></span><input name="origin" required minlength="2" maxlength="120" data-i18n-placeholder="form.originPlaceholder"></label>
+              <label><span data-i18n="form.destination"></span><input name="destination" required minlength="2" maxlength="120" data-i18n-placeholder="form.destinationPlaceholder"></label>
+              <label><span data-i18n="form.cargoType"></span><select name="cargo_type" required>
+                <option value="" data-i18n="form.choose"></option><option value="Жиһаз" data-i18n="cargo.furniture"></option><option value="Құрылыс материалдары" data-i18n="cargo.building"></option><option value="Азық-түлік" data-i18n="cargo.food"></option><option value="Тұрмыстық техника" data-i18n="cargo.appliances"></option><option value="Басқа" data-i18n="cargo.other"></option>
+              </select></label>
+              <label><span data-i18n="form.weight"></span><input name="weight_kg" type="number" min="0.1" max="50000" step="0.1" required data-i18n-placeholder="form.weightPlaceholder"></label>
+              <label><span data-i18n="form.date"></span><input name="transport_date" type="date" required></label>
+              <label><span data-i18n="form.phone"></span><input name="phone" type="tel" minlength="7" maxlength="30" required data-i18n-placeholder="form.phonePlaceholder"></label>
+              <label class="full-field"><span data-i18n="form.comment"></span><textarea name="comment" rows="3" maxlength="1000" data-i18n-placeholder="form.commentPlaceholder"></textarea></label>
+              <button class="btn btn-primary full-field submit-button" type="submit"><span data-i18n="form.submit"></span><span aria-hidden="true">→</span></button>
+            </form>
+          </div>
+        </div>
+        <section class="panel planning-requests">
+          <div class="panel-heading"><div><span class="eyebrow" data-i18n="planning.listKicker"></span><h2 data-i18n="planning.listTitle"></h2></div><button class="btn btn-outline" id="refreshPlanning" type="button"><span aria-hidden="true">↻</span><span data-i18n="actions.refresh"></span></button></div>
+          <div id="planningRequests" class="request-list"></div>
+          <div id="adminRequestsWrap" class="admin-requests-wrap hidden">
+            <div class="panel-heading admin-heading"><div><span class="eyebrow" data-i18n="planning.adminKicker"></span><h2 data-i18n="planning.adminTitle"></h2></div></div>
+            <div id="adminRequests" class="request-list"></div>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen" id="view-rates" data-screen="rates">
+        <div class="screen-heading page-heading">
+          <div><span class="eyebrow" data-i18n="rates.eyebrow"></span><h1 data-i18n="nav.rates"></h1><p data-i18n="rates.subtitle"></p></div>
+        </div>
+        <div class="rates-banner panel">
+          <div class="rates-banner-icon">₸</div>
+          <div><span class="eyebrow" data-i18n="rates.quoteKicker"></span><h2 data-i18n="rates.quoteTitle"></h2><p data-i18n="rates.quoteText"></p></div>
+          <button class="btn btn-primary" type="button" data-navigate="planning"><span data-i18n="rates.requestQuote"></span><span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="rates-grid">
+          <article class="panel rate-card"><span class="rate-number">01</span><h2 data-i18n="rates.cardOneTitle"></h2><p data-i18n="rates.cardOneText"></p><span class="rate-detail" data-i18n="rates.cardOneDetail"></span></article>
+          <article class="panel rate-card"><span class="rate-number">02</span><h2 data-i18n="rates.cardTwoTitle"></h2><p data-i18n="rates.cardTwoText"></p><span class="rate-detail" data-i18n="rates.cardTwoDetail"></span></article>
+          <article class="panel rate-card"><span class="rate-number">03</span><h2 data-i18n="rates.cardThreeTitle"></h2><p data-i18n="rates.cardThreeText"></p><span class="rate-detail" data-i18n="rates.cardThreeDetail"></span></article>
+        </div>
+        <p class="rates-footnote" data-i18n="rates.disclaimer"></p>
+      </section>
+
+      <section class="screen" id="view-settings" data-screen="settings">
+        <div class="screen-heading page-heading">
+          <div><span class="eyebrow" data-i18n="settings.eyebrow"></span><h1 data-i18n="nav.settings"></h1><p data-i18n="settings.subtitle"></p></div>
+        </div>
+        <div class="settings-grid">
+          <section class="panel settings-panel">
+            <div class="panel-heading"><div><span class="eyebrow" data-i18n="settings.languageKicker"></span><h2 data-i18n="settings.languageTitle"></h2></div><span class="settings-icon">文</span></div>
+            <p data-i18n="settings.languageText"></p>
+            <label class="settings-language"><span data-i18n="language.label"></span><select id="settingsLanguageSelect"><option value="kk">Қазақша</option><option value="ru">Русский</option></select></label>
+            <span class="save-note"><i></i><span data-i18n="settings.savedNote"></span></span>
+          </section>
+          <section class="panel settings-panel">
+            <div class="panel-heading"><div><span class="eyebrow" data-i18n="settings.accountKicker"></span><h2 data-i18n="settings.accountTitle"></h2></div><span class="settings-icon">Q</span></div>
+            <div class="account-summary"><span class="profile-avatar large">Q</span><div><strong id="settingsName" data-i18n="settings.guestName"></strong><small id="settingsRole" data-i18n="settings.guestRole"></small><small id="settingsEmail"></small></div></div>
+            <p data-i18n="settings.accountText"></p>
+            <button class="btn btn-outline hidden" id="settingsLogout" type="button" data-i18n="auth.logout"></button>
+            <button class="btn btn-primary" id="settingsLogin" type="button" data-i18n="auth.login"></button>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <a class="brand footer-brand" href="#dashboard"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 4v24M4 16h24M7.5 7.5l17 17m0-17-17 17" /></svg></span><span class="brand-name">Qamqor <span>Cargo</span></span></a>
+      <p data-i18n="footer.caption"></p>
+      <span>© 2026 Qamqor Cargo</span>
+    </footer>
+  </div>
+
+  <div class="modal hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-backdrop" type="button" data-close="true" aria-label="Close"></button>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" type="button" data-i18n-aria="modal.close" aria-label="Close">×</button>
+      <span class="eyebrow">QAMQOR CARGO</span>
+      <h2 id="modalTitle" data-i18n="auth.login"></h2>
+      <form id="authForm" class="auth-form">
+        <label id="registerNameWrap" class="hidden"><span data-i18n="auth.fullName"></span><input name="full_name" minlength="2" maxlength="120" autocomplete="name"></label>
+        <label id="registerPhoneWrap" class="hidden"><span data-i18n="form.phone"></span><input name="phone" minlength="7" maxlength="30" autocomplete="tel"></label>
+        <label><span data-i18n="auth.email"></span><input name="email" type="email" required maxlength="255" autocomplete="email"></label>
+        <label><span data-i18n="auth.password"></span><input name="password" type="password" required minlength="8" maxlength="128" autocomplete="current-password"></label>
+        <button class="btn btn-primary submit-button" type="submit" id="authSubmit" data-i18n="auth.login"></button>
+      </form>
+      <p class="modal-switch" id="authSwitch"><span data-i18n="auth.noAccount"></span> <button type="button" id="switchAuth" data-i18n="auth.register"></button></p>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/static/js/app.js" defer></script>
+</body>
+</html>

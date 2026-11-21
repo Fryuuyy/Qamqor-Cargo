@@ -4,12 +4,13 @@ JWT encoding/verification uses Python's standard library to keep the learning
 project dependency set small. Passwords are hashed with Argon2.
 """
 import base64
+import binascii
 import hashlib
 import hmac
 import json
 import time
 from argon2 import PasswordHasher
-from argon2.exceptions import VerifyMismatchError, VerificationError
+from argon2.exceptions import InvalidHashError, VerifyMismatchError, VerificationError
 from app.config import JWT_SECRET, ACCESS_TOKEN_EXPIRE_MINUTES
 
 _password_hasher = PasswordHasher()
@@ -26,7 +27,7 @@ def hash_password(password: str) -> str:
 def verify_password(password: str, password_hash: str) -> bool:
     try:
         return _password_hasher.verify(password_hash, password)
-    except (VerifyMismatchError, VerificationError):
+    except (InvalidHashError, VerifyMismatchError, VerificationError):
         return False
 
 def create_access_token(user_id: int) -> str:
@@ -46,8 +47,10 @@ def decode_access_token(token: str) -> int | None:
             return None
         header = json.loads(_b64decode(header_part))
         payload = json.loads(_b64decode(payload_part))
+        if not isinstance(header, dict) or not isinstance(payload, dict):
+            return None
         if header.get("alg") != "HS256" or int(payload.get("exp", 0)) <= int(time.time()):
             return None
         return int(payload["sub"])
-    except (ValueError, TypeError, KeyError, json.JSONDecodeError):
+    except (binascii.Error, UnicodeDecodeError, ValueError, TypeError, KeyError, OverflowError, AttributeError):
         return None

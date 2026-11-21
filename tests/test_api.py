@@ -2,6 +2,7 @@
 import os
 import tempfile
 import unittest
+from uuid import uuid4
 from fastapi.testclient import TestClient
 
 _fd, _db_path = tempfile.mkstemp(suffix=".db")
@@ -27,7 +28,7 @@ class TransportApiTests(unittest.TestCase):
         cls.admin_token=cls.client.post("/api/auth/login",json={"email":"admin@example.com","password":"AdminPass123!"}).json()["access_token"]
 
     def setUp(self):
-        self.customer_email=f"user{ id(self) }@example.com"
+        self.customer_email=f"user-{uuid4().hex}@example.com"
         response=self.client.post("/api/auth/register",json={"full_name":"Test Customer","email":self.customer_email,"phone":"+77001112233","password":"Customer123!"})
         self.assertEqual(response.status_code,201)
         self.token=response.json()["access_token"]
@@ -35,7 +36,29 @@ class TransportApiTests(unittest.TestCase):
 
     def test_health_and_home(self):
         self.assertEqual(self.client.get("/health").status_code,200)
-        self.assertEqual(self.client.get("/").status_code,200)
+        home=self.client.get("/")
+        self.assertEqual(home.status_code,200)
+        self.assertEqual(self.client.get("/static/css/style.css").status_code,200)
+        self.assertEqual(self.client.get("/static/js/app.js").status_code,200)
+        self.assertEqual(self.client.get("/static/images/hero-truck.jpg").status_code,200)
+        for screen in ("dashboard", "transportations", "planning", "rates", "settings"):
+            self.assertIn(f'data-screen="{screen}"',home.text)
+        self.assertIn('id="settingsLanguageSelect"',home.text)
+
+    def test_profile_requires_auth_and_returns_current_customer(self):
+        self.assertEqual(self.client.get("/api/auth/me").status_code,401)
+        response=self.client.get("/api/auth/me",headers=self.headers)
+        self.assertEqual(response.status_code,200)
+        self.assertEqual(response.json()["email"],self.customer_email)
+        self.assertEqual(response.json()["role"],"customer")
+
+    def test_malformed_token_is_rejected_without_server_error(self):
+        response=self.client.get("/api/auth/me",headers={"Authorization":"Bearer a.b.c"})
+        self.assertEqual(response.status_code,401)
+
+    def test_registration_rejects_blank_trimmed_name(self):
+        response=self.client.post("/api/auth/register",json={"full_name":"   ","email":f"blank-{uuid4().hex}@example.com","phone":"+77001112233","password":"Customer123!"})
+        self.assertEqual(response.status_code,422)
 
     def test_register_duplicate_email(self):
         response=self.client.post("/api/auth/register",json={"full_name":"Another User","email":self.customer_email,"phone":"+77001112233","password":"Customer123!"})
@@ -53,6 +76,27 @@ class TransportApiTests(unittest.TestCase):
     def test_customer_cannot_open_admin_list(self):
         response=self.client.get("/api/requests/admin/all",headers=self.headers)
         self.assertEqual(response.status_code,403)
+
+    def test_customer_cannot_update_status(self):
+        payload={"origin":"Көкшетау","destination":"Астана","cargo_type":"Жиһаз","weight_kg":100,"transport_date":"2099-12-25","phone":"+77001112233"}
+        created=self.client.post("/api/requests",json=payload,headers=self.headers)
+        response=self.client.patch(f"/api/requests/{created.json()['id']}/status",json={"status":"confirmed"},headers=self.headers)
+        self.assertEqual(response.status_code,403)
+
+    def test_admin_cannot_skip_status_transition(self):
+        payload={"origin":"Көкшетау","destination":"Астана","cargo_type":"Жиһаз","weight_kg":100,"transport_date":"2099-12-25","phone":"+77001112233"}
+        created=self.client.post("/api/requests",json=payload,headers=self.headers)
+        headers={"Authorization":f"Bearer {self.admin_token}"}
+        response=self.client.patch(f"/api/requests/{created.json()['id']}/status",json={"status":"delivered"},headers=headers)
+        self.assertEqual(response.status_code,409)
+
+    def test_customer_cannot_cancel_another_customers_request(self):
+        payload={"origin":"Көкшетау","destination":"Астана","cargo_type":"Жиһаз","weight_kg":120,"transport_date":"2099-12-25","phone":"+77001112233"}
+        created=self.client.post("/api/requests",json=payload,headers=self.headers)
+        other=self.client.post("/api/auth/register",json={"full_name":"Other Customer","email":f"other-{uuid4().hex}@example.com","phone":"+77002223344","password":"Customer123!"})
+        other_headers={"Authorization":f"Bearer {other.json()['access_token']}"}
+        response=self.client.post(f"/api/requests/{created.json()['id']}/cancel",headers=other_headers)
+        self.assertEqual(response.status_code,404)
 
     def test_admin_can_confirm_request(self):
         payload={"origin":"Көкшетау","destination":"Астана","cargo_type":"Жиһаз","weight_kg":100,"transport_date":"2099-12-25","phone":"+77001112233"}

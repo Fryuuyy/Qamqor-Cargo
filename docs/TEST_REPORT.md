@@ -1,24 +1,22 @@
-# Тексеру есебі
+# Test report
 
-Тексеру ортасы: Python 3.13, FastAPI TestClient, SQLite уақытша дерекқоры.
+Checked on 2026-11-21 against the current source using Python 3.12, FastAPI TestClient, and an isolated temporary SQLite database.
 
-| № | Сценарий | Күтілетін нәтиже | Нәтиже |
-|---:|---|---:|---|
-| 1 | Басты бет және health endpoint | 200 | PASS |
-| 2 | Қайталанған email тіркеу | 409 | PASS |
-| 3 | Өтінім құру және өз өтінімдерін көру | 201 / 200 | PASS |
-| 4 | Клиенттің әкімшілік тізімге кіруі | 403 | PASS |
-| 5 | Әкімшінің өтінімді растауы | 200 | PASS |
-| 6 | Нөл салмақпен өтінім жіберу | 422 | PASS |
-| 7 | Клиенттің pending өтінімін тоқтатуы | 200 | PASS |
-| 8 | Басқа клиент өтінімін оқу әрекеті | 404 | PASS |
+## Automated checks
 
-Қосымша интеграциялық тексеруде `/`, `/health`, `/docs`, `/openapi.json`, CSS және JavaScript ресурстары HTTP 200 қайтарды. Әкімші авторизациясы 200 жауап берді.
+| Check | Result |
+|---|---|
+| API, auth, roles, request creation/cancellation, and status transitions | 14 tests passed |
+| Home, five separate screen sections, persisted-language control markup, CSS/JS/image routes | Passed |
+| JavaScript syntax (`node --check`) | Passed |
+| Python syntax (`py_compile`) | Passed |
+| Visible interface translation keys | 118 keys present in both Kazakh and Russian |
+| JavaScript ID selectors | All matched an element in the template |
 
-JavaScript файлы `node --check` арқылы синтаксистік тексеруден өтті.
+The test suite does not create or modify production records. A Starlette deprecation warning is emitted for its current use of HTTPX in TestClient; the test run still completes successfully.
 
-## Шектеулер
-- Нақты браузердегі Playwright E2E сценарийлері бұл нұсқада орындалған жоқ.
-- Нагрузкалық тест жүргізілген жоқ.
-- Нақты төлем, GPS, SMS және email интеграциясы жоқ.
-- Бұл тесттер өндірістік қауіпсіздік аудитін алмастырмайды.
+## Scope and limitations
+
+- No browser-driven end-to-end test or mobile-device test was run.
+- The interface reports that live vehicle telemetry is not connected. No GPS, payment, SMS, or real tariff calculation is implemented.
+- The Render service uses the repository's SQLite default unless a managed database URL is configured. Render's local filesystem can be reset after restarts or redeploys; use persistent storage for durable production records.
