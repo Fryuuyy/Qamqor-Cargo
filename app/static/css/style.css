@@ -288,6 +288,179 @@ button { cursor: pointer; }
   .footer-brand .brand-name { font-size: 13px; }
   .modal-card { padding: 26px 21px; }
 }
+/* Dashboard refinement: clearer hierarchy, roomier cards, and a more visible truck. */
+#view-dashboard .screen-heading {
+  min-height: 68px;
+  margin: 0 2px 25px;
+}
+#view-dashboard .screen-heading h1 {
+  font-size: clamp(25px, 2.4vw, 30px);
+  letter-spacing: -1px;
+}
+#view-dashboard .screen-heading p { max-width: 680px; font-size: 13px; }
+#view-dashboard .screen-heading .eyebrow { font-size: 10px; }
+#view-dashboard .service-status { padding: 10px 14px; font-size: 11px; }
+#view-dashboard .hero-card {
+  min-height: 330px;
+  border-radius: 22px;
+  box-shadow: 0 20px 54px rgba(31,48,60,.11);
+}
+#view-dashboard .hero-truck { object-position: 61% 55%; }
+#view-dashboard .hero-shade {
+  background: linear-gradient(90deg,rgba(250,251,250,.98) 0%,rgba(250,251,250,.94) 32%,rgba(250,251,250,.75) 46%,rgba(250,251,250,.16) 67%,rgba(250,251,250,0) 82%),linear-gradient(0deg,rgba(27,39,48,.12),transparent 48%);
+}
+#view-dashboard .hero-copy { width: min(50%, 560px); padding: 42px 0 44px 48px; }
+#view-dashboard .hero-kicker { font-size: 10px; }
+#view-dashboard .hero-copy h2 { max-width: 440px; font-size: clamp(31px, 3.25vw, 42px); }
+#view-dashboard .hero-copy p { max-width: 380px; font-size: 14px; line-height: 1.65; }
+#view-dashboard .hero-copy .btn { min-height: 50px; padding: 15px 21px; font-size: 13px; }
+#view-dashboard .hero-tag { right: 20px; bottom: 19px; padding: 10px 15px 10px 10px; }
+#view-dashboard .hero-tag-icon { width: 34px; height: 34px; }
+#view-dashboard .hero-tag small { font-size: 9px; }
+#view-dashboard .hero-tag strong { font-size: 11px; }
+#view-dashboard .dashboard-metrics { gap: 14px; margin: 20px 0 29px; }
+#view-dashboard .metric-card {
+  min-height: 88px;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(35,52,62,.025);
+}
+#view-dashboard .metric-icon { width: 40px; height: 40px; border-radius: 12px; font-size: 19px; }
+#view-dashboard .metric-card small { font-size: 11px; }
+#view-dashboard .metric-card strong { font-size: 23px; }
+#view-dashboard .dashboard-grid { gap: 17px; }
+#view-dashboard .panel { padding: 23px; border-radius: 16px; }
+#view-dashboard .panel-heading h2 { font-size: 18px; }
+#view-dashboard .panel-heading .eyebrow { font-size: 9px; }
+#view-dashboard .shipment-info-panel,
+#view-dashboard .tracking-panel { min-height: 218px; }
+#view-dashboard .shipment-cargo-row {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 112px;
+  align-items: end;
+  gap: 16px;
+  margin-top: 22px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eef1f2;
+}
+#view-dashboard .shipment-cargo-row small,
+#view-dashboard .shipment-cargo-row strong { display: block; }
+#view-dashboard .shipment-cargo-row small { margin-bottom: 4px; color: var(--muted); font-size: 10px; }
+#view-dashboard .shipment-cargo-row strong { font-size: 15px; overflow-wrap: anywhere; }
+#view-dashboard .summary-empty-state {
+  display: grid;
+  grid-template-columns: 40px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 13px;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f7f9fa;
+}
+#view-dashboard .summary-empty-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #cf642f;
+  background: var(--orange-soft);
+  font-size: 19px;
+  font-weight: 800;
+}
+#view-dashboard .summary-empty-state strong { display: block; font-size: 13px; }
+#view-dashboard .summary-empty-state p { margin: 4px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+#view-dashboard .summary-empty-state .btn { min-height: 39px; padding: 10px 12px; font-size: 10px; }
+#view-dashboard .tracking-empty {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 100px;
+  margin: 20px 0 0;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f7f9fa;
+  font-size: 12px;
+}
+#view-dashboard .tracking-empty::before {
+  content: "⌖";
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 11px;
+  color: #cf642f;
+  background: var(--orange-soft);
+  font-size: 19px;
+}
+#view-dashboard .summary-route { gap: 12px; }
+#view-dashboard .summary-route small,
+#view-dashboard .summary-meta small,
+#view-dashboard .tracking-number-row small,
+#view-dashboard .tracking-route small,
+#view-dashboard .route-summary small { font-size: 10px; }
+#view-dashboard .summary-route strong { font-size: 14px; }
+#view-dashboard .summary-meta strong,
+#view-dashboard .tracking-route strong { font-size: 12px; }
+#view-dashboard .status { font-size: 10px; }
+#view-dashboard .tracking-number-row strong { font-size: 15px; }
+#view-dashboard .route-map { height: 132px; }
+#view-dashboard .map-label { font-size: 9px; }
+#view-dashboard .route-summary strong { font-size: 13px; }
+#view-dashboard .vehicle-status { margin: 26px 0 17px; }
+#view-dashboard .vehicle-status-icon,
+#view-dashboard .vehicle-symbol,
+#view-dashboard .tracking-mark { width: 38px; height: 38px; font-size: 19px; }
+#view-dashboard .vehicle-status strong { font-size: 13px; }
+#view-dashboard .vehicle-status small,
+#view-dashboard .vehicle-note { font-size: 11px; }
+#view-dashboard .vehicle-note { padding: 13px; }
+#view-dashboard .text-button { font-size: 12px; }
+@media (max-width: 1120px) {
+  #view-dashboard .hero-card { min-height: 310px; }
+  #view-dashboard .hero-copy { width: 54%; padding-left: 32px; }
+}
+@media (max-width: 850px) {
+  #view-dashboard .hero-card { min-height: 292px; }
+  #view-dashboard .hero-copy { width: 57%; padding-left: 27px; }
+  #view-dashboard .panel { padding: 19px; }
+  #view-dashboard .metric-card { padding: 14px; }
+}
+@media (max-width: 620px) {
+  #view-dashboard .screen-heading { min-height: 0; margin: 0 1px 18px; }
+  #view-dashboard .screen-heading h1 { font-size: 25px; }
+  #view-dashboard .screen-heading p { font-size: 12px; }
+  #view-dashboard .screen-heading .eyebrow { font-size: 9px; }
+  #view-dashboard .service-status { margin-top: 14px; padding: 8px 9px; font-size: 9px; }
+  #view-dashboard .hero-card { min-height: 420px; border-radius: 18px; }
+  #view-dashboard .hero-truck { height: 64%; object-position: 62% center; }
+  #view-dashboard .hero-shade { background: linear-gradient(180deg,rgba(250,251,250,.98) 0%,rgba(250,251,250,.76) 40%,rgba(250,251,250,.12) 68%,rgba(250,251,250,0) 100%); }
+  #view-dashboard .hero-copy { position: relative; z-index: 1; width: 100%; padding: 26px 21px; background: #fafbfa; }
+  #view-dashboard .hero-copy h2 { max-width: 340px; font-size: 28px; }
+  #view-dashboard .hero-copy p { max-width: 330px; font-size: 13px; }
+  #view-dashboard .hero-copy .btn { min-height: 46px; padding: 13px 16px; font-size: 12px; }
+  #view-dashboard .hero-tag { right: 10px; bottom: 10px; }
+  #view-dashboard .dashboard-metrics { gap: 9px; margin: 13px 0 20px; }
+  #view-dashboard .metric-card { min-height: 72px; gap: 9px; padding: 10px; border-radius: 12px; }
+  #view-dashboard .metric-icon { width: 32px; height: 32px; border-radius: 10px; font-size: 15px; }
+  #view-dashboard .metric-card small { font-size: 10px; }
+  #view-dashboard .metric-card strong { font-size: 19px; }
+  #view-dashboard .dashboard-grid { gap: 12px; }
+  #view-dashboard .panel { padding: 17px; border-radius: 13px; }
+  #view-dashboard .panel-heading h2 { font-size: 16px; }
+  #view-dashboard .panel-heading .eyebrow { font-size: 9px; }
+  #view-dashboard .shipment-info-panel,
+  #view-dashboard .tracking-panel { min-height: 0; }
+  #view-dashboard .summary-empty-state { grid-template-columns: 34px minmax(0,1fr); gap: 10px; padding: 12px; }
+  #view-dashboard .summary-empty-icon { width: 34px; height: 34px; }
+  #view-dashboard .summary-empty-state .btn { grid-column: 2; justify-self: start; max-width: 100%; }
+  #view-dashboard .shipment-cargo-row { grid-template-columns: minmax(0,1fr) auto; gap: 10px; margin-top: 18px; }
+  #view-dashboard .shipment-cargo-row strong { font-size: 13px; }
+  #view-dashboard .tracking-empty { min-height: 82px; margin-top: 15px; padding: 12px; font-size: 11px; }
+  #view-dashboard .route-map { height: 124px; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
