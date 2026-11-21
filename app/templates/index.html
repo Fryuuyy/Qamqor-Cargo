@@ -124,9 +124,10 @@
         </div>
         <div class="planning-layout">
           <aside class="planning-aside panel">
-            <span class="panel-icon-large">＋</span>
-            <h2 data-i18n="planning.asideTitle"></h2>
-            <p data-i18n="planning.asideText"></p>
+            <div class="planning-intro">
+              <span class="panel-icon-large" aria-hidden="true">＋</span>
+              <div><h2 data-i18n="planning.asideTitle"></h2><p data-i18n="planning.asideText"></p></div>
+            </div>
             <div class="planning-steps">
               <div><span>01</span><strong data-i18n="planning.stepOne"></strong></div>
               <div><span>02</span><strong data-i18n="planning.stepTwo"></strong></div>
@@ -144,6 +145,7 @@
               </div>
             </div>
             <form id="requestForm" class="form-grid hidden">
+              <div class="form-heading full-field"><div><span class="eyebrow" data-i18n="planning.formKicker"></span><h2 data-i18n="planning.formTitle"></h2></div><p data-i18n="planning.formText"></p></div>
               <label><span data-i18n="form.origin"></span><input name="origin" required minlength="2" maxlength="120" data-i18n-placeholder="form.originPlaceholder"></label>
               <label><span data-i18n="form.destination"></span><input name="destination" required minlength="2" maxlength="120" data-i18n-placeholder="form.destinationPlaceholder"></label>
               <label><span data-i18n="form.cargoType"></span><select name="cargo_type" required>

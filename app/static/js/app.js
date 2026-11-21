@@ -14,7 +14,7 @@ const translations = {
     'vehicle.workflowTitle':'Бақылау өтінім мәртебесімен жүргізіледі','vehicle.workflowText':'Жеткізу барысы соңғы өтінім дерегінен алынады.','vehicle.telemetryNote':'Көлік датчиктері қосылмаған. Орналасу орны мен нақты уақыт телеметриясы көрсетілмейді.','vehicle.openShipments':'Тасымалдар тізімін ашу',
     'transportations.eyebrow':'ТАСЫМАЛДАРЫҢЫЗ','transportations.subtitle':'Өтінімдерді қарап, жеткізу мәртебесін сүзгі арқылы таңдаңыз.','transportations.filter':'Мәртебе','filter.all':'Барлық мәртебе',
     'actions.refresh':'Жаңарту','actions.openTransportations':'Тасымалдарды ашу','actions.cancel':'Өтінімді тоқтату','actions.save':'Сақтау','actions.status':'Мәртебені өзгерту','actions.optionalNote':'Ескерту (міндетті емес)',
-    'planning.eyebrow':'ТАСЫМАЛДЫ ҰЙЫМДАСТЫРУ','planning.subtitle':'Жүк пен бағыт туралы деректерді енгізіңіз. Тариф пен көлік түрі өтінімді қарағаннан кейін нақтыланады.','planning.asideTitle':'Жүк жоспарын оңай бастаңыз','planning.asideText':'Өтінім жіберілген соң, оның нөмірі мен мәртебесі сіздің тасымалдар тізімінде сақталады.','planning.stepOne':'Бағыт пен жүк деректерін толтырыңыз','planning.stepTwo':'Өтінім нөмірін алыңыз','planning.stepThree':'Мәртебе жаңартуларын бақылаңыз','planning.loginTitle':'Өтінім үшін жүйеге кіріңіз','planning.loginText':'Жүк тасымалына өтінім жіберу және оны бақылау үшін тіркеліңіз немесе жүйеге кіріңіз.','planning.listKicker':'САҚТАЛҒАН ӨТІНІМДЕР','planning.listTitle':'Жоспарланған тасымалдар','planning.adminKicker':'ӘКІМШІ БАСҚАРУЫ','planning.adminTitle':'Барлық клиент өтінімдері',
+    'planning.eyebrow':'ТАСЫМАЛДЫ ҰЙЫМДАСТЫРУ','planning.subtitle':'Өтінім жасаңыз: көлік түрі мен құны деректер қаралғаннан кейін нақтыланады.','planning.asideTitle':'3 қадамда тасымалды жоспарлаңыз','planning.asideText':'Маршрут пен жүк мәліметтерін енгізіп, өтінімді жіберіңіз.','planning.stepOne':'Маршрут пен жүк деректерін енгізіңіз','planning.stepTwo':'Өтінімді жіберіңіз','planning.stepThree':'Мәртебесін бақылаңыз','planning.formKicker':'ЖАҢА ӨТІНІМ','planning.formTitle':'Тасымал деректері','planning.formText':'Жіберілген өтінім нөмірі мен мәртебесі тасымалдар тізімінде сақталады.','planning.loginTitle':'Өтінім үшін жүйеге кіріңіз','planning.loginText':'Жүк тасымалына өтінім жіберу және оны бақылау үшін тіркеліңіз немесе жүйеге кіріңіз.','planning.listKicker':'САҚТАЛҒАН ӨТІНІМДЕР','planning.listTitle':'Жоспарланған тасымалдар','planning.adminKicker':'ӘКІМШІ БАСҚАРУЫ','planning.adminTitle':'Барлық клиент өтінімдері',
     'form.origin':'Қай қаладан','form.destination':'Қай қалаға','form.cargoType':'Жүк түрі','form.choose':'Таңдаңыз','form.weight':'Жүк салмағы (кг)','form.date':'Тасымалдау күні','form.phone':'Байланыс телефоны','form.comment':'Қосымша ақпарат','form.submit':'Өтінім жіберу','form.originPlaceholder':'Мысалы, Алматы','form.destinationPlaceholder':'Мысалы, Астана','form.weightPlaceholder':'500','form.phonePlaceholder':'+7 700 000 00 00','form.commentPlaceholder':'Жүк пен жеткізу туралы мәліметтер',
     'cargo.furniture':'Жиһаз','cargo.building':'Құрылыс материалдары','cargo.food':'Азық-түлік','cargo.appliances':'Тұрмыстық техника','cargo.other':'Басқа',
     'rates.eyebrow':'ҚЫЗМЕТТЕР МЕН ТӨЛЕМ','rates.subtitle':'Бағытқа, жүкке және тасымал шарттарына қарай жеке есеп жасалады.','rates.quoteKicker':'ЖЕКЕ ҰСЫНЫС','rates.quoteTitle':'Тасымал құны өтінімнен кейін есептеледі','rates.quoteText':'Баға бағытқа, жүк түрі мен салмағына және қажетті көлікке байланысты. Дәл ұсынысты өтініміңізді қарап шыққаннан кейін береміз.','rates.requestQuote':'Баға сұрау',
@@ -44,7 +44,7 @@ const translations = {
     'vehicle.workflowTitle':'Контроль по данным заявки','vehicle.workflowText':'Ход доставки отображается по последнему статусу заявки.','vehicle.telemetryNote':'Датчики транспорта не подключены. Геопозиция и телеметрия в реальном времени недоступны.','vehicle.openShipments':'Открыть список перевозок',
     'transportations.eyebrow':'ВАШИ ПЕРЕВОЗКИ','transportations.subtitle':'Просматривайте заявки и фильтруйте их по статусу доставки.','transportations.filter':'Статус','filter.all':'Все статусы',
     'actions.refresh':'Обновить','actions.openTransportations':'Открыть перевозки','actions.cancel':'Отменить заявку','actions.save':'Сохранить','actions.status':'Изменить статус','actions.optionalNote':'Комментарий (необязательно)',
-    'planning.eyebrow':'ОРГАНИЗАЦИЯ ПЕРЕВОЗКИ','planning.subtitle':'Укажите маршрут и сведения о грузе. Тариф и тип транспорта уточняются после рассмотрения заявки.','planning.asideTitle':'Начните планирование груза','planning.asideText':'После отправки заявка появится в списке перевозок с номером и текущим статусом.','planning.stepOne':'Укажите маршрут и параметры груза','planning.stepTwo':'Получите номер заявки','planning.stepThree':'Следите за обновлением статуса','planning.loginTitle':'Войдите, чтобы оставить заявку','planning.loginText':'Зарегистрируйтесь или войдите, чтобы заказать перевозку и следить за её ходом.','planning.listKicker':'СОХРАНЁННЫЕ ЗАЯВКИ','planning.listTitle':'Запланированные перевозки','planning.adminKicker':'УПРАВЛЕНИЕ АДМИНИСТРАТОРА','planning.adminTitle':'Заявки клиентов',
+    'planning.eyebrow':'ОРГАНИЗАЦИЯ ПЕРЕВОЗКИ','planning.subtitle':'Создайте заявку: тип транспорта и стоимость уточним после проверки данных.','planning.asideTitle':'Оформите перевозку за 3 шага','planning.asideText':'Укажите маршрут и груз, затем отправьте заявку.','planning.stepOne':'Введите маршрут и параметры груза','planning.stepTwo':'Отправьте заявку','planning.stepThree':'Следите за статусом','planning.formKicker':'НОВАЯ ЗАЯВКА','planning.formTitle':'Детали перевозки','planning.formText':'После отправки номер заявки и её статус появятся в списке перевозок.','planning.loginTitle':'Войдите, чтобы оставить заявку','planning.loginText':'Зарегистрируйтесь или войдите, чтобы заказать перевозку и следить за её ходом.','planning.listKicker':'СОХРАНЁННЫЕ ЗАЯВКИ','planning.listTitle':'Запланированные перевозки','planning.adminKicker':'УПРАВЛЕНИЕ АДМИНИСТРАТОРА','planning.adminTitle':'Заявки клиентов',
     'form.origin':'Откуда','form.destination':'Куда','form.cargoType':'Тип груза','form.choose':'Выберите','form.weight':'Вес груза (кг)','form.date':'Дата перевозки','form.phone':'Контактный телефон','form.comment':'Дополнительная информация','form.submit':'Отправить заявку','form.originPlaceholder':'Например, Алматы','form.destinationPlaceholder':'Например, Астана','form.weightPlaceholder':'500','form.phonePlaceholder':'+7 700 000 00 00','form.commentPlaceholder':'Детали о грузе и доставке',
     'cargo.furniture':'Мебель','cargo.building':'Строительные материалы','cargo.food':'Продукты питания','cargo.appliances':'Бытовая техника','cargo.other':'Другое',
     'rates.eyebrow':'УСЛУГИ И ОПЛАТА','rates.subtitle':'Стоимость рассчитывается индивидуально с учётом маршрута, груза и условий перевозки.','rates.quoteKicker':'ИНДИВИДУАЛЬНОЕ ПРЕДЛОЖЕНИЕ','rates.quoteTitle':'Стоимость рассчитывается после заявки','rates.quoteText':'Цена зависит от маршрута, типа и веса груза, а также необходимого транспорта. Подготовим точное предложение после рассмотрения заявки.','rates.requestQuote':'Запросить стоимость',
@@ -79,6 +79,17 @@ function t(key, variables={}) {
 }
 function escapeHtml(value='') {
   return String(value).replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+}
+function cargoLabel(value='') {
+  const labels = {
+    'Жиһаз':'cargo.furniture','Мебель':'cargo.furniture',
+    'Құрылыс материалдары':'cargo.building','Строительные материалы':'cargo.building',
+    'Азық-түлік':'cargo.food','Продукты питания':'cargo.food',
+    'Тұрмыстық техника':'cargo.appliances','Бытовая техника':'cargo.appliances',
+    'Басқа':'cargo.other','Другое':'cargo.other'
+  };
+  const key = labels[String(value)];
+  return key ? t(key) : String(value);
 }
 function toast(message, error=false) {
   const el = $('#toast');
@@ -229,7 +240,7 @@ function requestCard(item, admin=false) {
   const requestId = Number(item.id);
   const route = escapeHtml(item.origin) + ' <span aria-hidden="true">→</span> ' + escapeHtml(item.destination);
   const details = '<div class="request-details"><h3>' + escapeHtml(item.request_number) + ' · ' + route + '</h3>' +
-    '<p>' + escapeHtml(t('labels.cargo')) + ': ' + escapeHtml(item.cargo_type) + ' · ' + escapeHtml(t('labels.weight')) + ': ' + escapeHtml(item.weight_kg) + ' кг · ' + escapeHtml(t('labels.date')) + ': ' + escapeHtml(item.transport_date) + '</p>' +
+    '<p>' + escapeHtml(t('labels.cargo')) + ': ' + escapeHtml(cargoLabel(item.cargo_type)) + ' · ' + escapeHtml(t('labels.weight')) + ': ' + escapeHtml(item.weight_kg) + ' кг · ' + escapeHtml(t('labels.date')) + ': ' + escapeHtml(item.transport_date) + '</p>' +
     '<p>' + (admin ? escapeHtml(t('labels.customer')) + ': ' + escapeHtml(item.customer_name || '') + ' · ' : '') + escapeHtml(t('labels.phone')) + ': ' + escapeHtml(item.phone) + '</p>' +
     (item.comment ? '<p>' + escapeHtml(item.comment) + '</p>' : '') +
     (item.admin_note ? '<p>' + escapeHtml(t('labels.note')) + ': ' + escapeHtml(item.admin_note) + '</p>' : '') + '</div>';
@@ -247,7 +258,7 @@ function requestCard(item, admin=false) {
 }
 function requestSummary(item) {
   if (!item) return '<div class="summary-empty-state"><span class="summary-empty-icon" aria-hidden="true">↗</span><div><strong>' + escapeHtml(t('dashboard.emptyTitle')) + '</strong><p>' + escapeHtml(state.user ? t('empty.requests') : t('empty.login')) + '</p></div><button class="btn btn-outline" type="button" data-navigate="planning">' + escapeHtml(t('dashboard.createShipment')) + '<span aria-hidden="true">→</span></button></div>';
-  return '<div class="shipment-cargo-row"><div><small>' + escapeHtml(t('labels.cargo')) + '</small><strong>' + escapeHtml(item.cargo_type) + '</strong></div><div><small>' + escapeHtml(t('labels.weight')) + '</small><strong>' + escapeHtml(item.weight_kg) + ' кг</strong></div></div>' +
+  return '<div class="shipment-cargo-row"><div><small>' + escapeHtml(t('labels.cargo')) + '</small><strong>' + escapeHtml(cargoLabel(item.cargo_type)) + '</strong></div><div><small>' + escapeHtml(t('labels.weight')) + '</small><strong>' + escapeHtml(item.weight_kg) + ' кг</strong></div></div>' +
     '<div class="summary-meta"><div><small>' + escapeHtml(t('labels.request')) + '</small><strong>' + escapeHtml(item.request_number) + '</strong></div><div><small>' + escapeHtml(t('labels.date')) + '</small><strong>' + escapeHtml(item.transport_date) + '</strong></div>' + statusBadge(item.status) + '</div>';
 }
 function trackingMarkup(item) {
